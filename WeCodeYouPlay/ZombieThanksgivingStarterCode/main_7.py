@@ -34,6 +34,7 @@ while not game.over:
       y = randint(  100, 500  )
       zombie.moveTo( x, y )
       zombie.damage += 5
+      zombie.speed += 2
 
     crosshair.moveTo(mouse.x, mouse.y)
     game.drawText( "Zombie Damage: " + str(zombie.damage), 10, 10)
