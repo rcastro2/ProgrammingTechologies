@@ -29,7 +29,7 @@ while not game.over:
       turkey.moveTo( x, y )
       turkey.health -= 5
 
-    if mouse.collidedWith( zombie  ) and mouse.LeftClick::
+    if mouse.collidedWith( zombie  ) and mouse.LeftClick:
       x = randint(  100, 700  )
       y = randint(  100, 500  )
       zombie.moveTo( x, y )
