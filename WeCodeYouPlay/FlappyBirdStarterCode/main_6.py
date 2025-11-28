@@ -41,6 +41,7 @@ while not game.over:
     rings.y = randint(200,300)
     rings.x = game.width + 100
     rings.speed += 1
+    rings.visible = True
 
   if (bird.collidedWith(bar,"rectangle") or 
   bird.collidedWith(pipetop,"rectangle") or 
