@@ -1,6 +1,6 @@
 from gamelib import *
 
-#Modular Programming
+#Game Functions (Modular Programming)
 def hero_update():
     hero.draw()
     if keys.Pressed[K_LEFT]:
@@ -20,7 +20,8 @@ def positionObjects( objects ):
         objects[i].moveTo(x, -y)
         s = randint(4, 8)
         objects[i].setSpeed(s, 180)
-      
+
+#Main Program
 game = Game(800,600,"Delta Fighter")
 bk = Animation("./images/field_5.png",5,game,1000,1000)
 game.setBackground(bk)
