@@ -1,6 +1,6 @@
 from gamelib import *
 
-#Modular Programming
+#Game Functions (Modular Programming)
 def hero_update():
     hero.draw()
     healthbar.moveTo( hero.x - 30, hero.y + 50 )
@@ -37,7 +37,8 @@ def positionObjects( objects ):
         s = randint(4, 8)
         objects[i].visible = True
         objects[i].setSpeed(s, 180)
-      
+
+#Main Program      
 game = Game(800,600,"Delta Fighter")
 bk = Animation("./images/field_5.png",5,game,1000,1000)
 game.setBackground(bk)
@@ -115,12 +116,12 @@ while not game.over:
     
     game.update(30)
 
-#Level 1
+#Level 2
 game.over = False
 positionObjects(aliens)
 positionObjects(plasmaballs)
 positionObjects(healthpods)
-hero.ammo = 10
+hero.ammo = 10 #For testing purposes
 while not game.over and hero.health > 0:
     game.processInput()
     game.scrollBackground("down",2)

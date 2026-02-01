@@ -99,7 +99,7 @@ while not game.over:
     
     game.update(30)
 
-#Level 1
+#Level 2
 game.over = False
 while not game.over and hero.health > 0:
     game.processInput()
