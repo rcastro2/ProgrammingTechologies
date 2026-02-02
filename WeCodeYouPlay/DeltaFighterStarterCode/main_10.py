@@ -131,10 +131,10 @@ while not game.over and hero.health > 0:
     hero_update()
     #power_update()
     boss.move()
-    bossHealthBar.width = boss.health 
-    bossHealthBar.y = boss.bottom
-    bossHealthBar.x = boss.x - bossHealthBar.width / 2
-    bossHealthBar.draw()
+    boss_bar.width = boss.health 
+    boss_bar.y = boss.bottom
+    boss_bar.x = boss.x - boss_bar.width / 2
+    boss_bar.draw()
     for i in range(len(aliens)):
         aliens[i].move()
         if hero.collidedWith( aliens[ i ]):
