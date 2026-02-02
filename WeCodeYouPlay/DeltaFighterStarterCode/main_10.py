@@ -75,6 +75,7 @@ explosion.visible = False
 boss = Image("./images/aliensh.png",game)
 boss.y = -100
 boss.setSpeed(0.5,180)
+bossHealthBar = Shape("bar",game,100,10,green)
 
 aliens = []
 for index in range(40):
@@ -130,6 +131,10 @@ while not game.over and hero.health > 0:
     hero_update()
     #power_update()
     boss.move()
+    bossHealthBar.width = boss.health 
+    bossHealthBar.y = boss.bottom
+    bossHealthBar.x = boss.x - bossHealthBar.width / 2
+    bossHealthBar.draw()
     for i in range(len(aliens)):
         aliens[i].move()
         if hero.collidedWith( aliens[ i ]):
