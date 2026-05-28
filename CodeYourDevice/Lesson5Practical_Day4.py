@@ -16,6 +16,7 @@ while not gameover:
         gameover = True
     
     sleep(100)
+    
 #Main Screen
 gameover = False
 score = 0
